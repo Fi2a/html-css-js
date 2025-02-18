@@ -21,7 +21,12 @@ const divs = document.querySelectorAll("#root > div");
 
 const makeNumber = () => Math.floor(Math.random() * 6);
 
-divs[0].innerHTML = null;
+divs.forEach((div, index) => {
+  div.innerHTML = null;
+  const makeNumber = () => {
+    Math.floor(Math.random() * 6);
+  };
+});
 divs[1].innerHTML = null;
 
 dice1.forEach((img) => {
